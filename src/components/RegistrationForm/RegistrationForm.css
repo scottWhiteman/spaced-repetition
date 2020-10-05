@@ -1,0 +1,45 @@
+h2 {
+  text-align: center;
+}
+
+form {
+  background-color: rgb(2, 105, 19);
+  padding: 10px;
+  color: #fff;
+  margin: 0 10px;
+  border-radius: 1em;
+  border: 5px solid rgb(16, 90, 22);
+  border-right: 5px solid rgb(0, 60, 44);
+  border-bottom: 5px solid rgb(0, 60, 44);
+}
+
+form div {
+  padding: 5px 0;
+}
+
+form footer {
+  text-align: center;
+}
+
+form footer button {
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 0.3em;
+  background-color: rgb(255, 255, 255);
+  margin: 10px 0;
+}
+form footer button:hover {
+  background-color: rgb(200, 220, 200);
+}
+
+form footer button:active {
+
+}
+
+form footer a {
+  color: rgb(255, 255, 60);
+}
+
+form footer a:active{
+  color: rgb(255, 191, 101);
+}
