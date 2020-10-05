@@ -1,45 +1,56 @@
 h2 {
   text-align: center;
+  margin: 50px 0 15px 0;
 }
 
 form {
-  background-color: rgb(2, 105, 19);
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  max-width: 450px;
+  background-color: rgb(46, 81, 116);
   padding: 10px;
-  color: #fff;
-  margin: 0 10px;
+  color: #f0f8ff;
+  margin: auto;
+  margin-top: 10px;
   border-radius: 1em;
-  border: 5px solid rgb(16, 90, 22);
-  border-right: 5px solid rgb(0, 60, 44);
-  border-bottom: 5px solid rgb(0, 60, 44);
+  border: 2px solid rgba(16, 37, 90, 0.331);
+  box-shadow: 5px 10px 20px 3px #888888;
 }
 
 form div {
   padding: 5px 0;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  width: 100%;
+  padding: 3px;
 }
 
 form footer {
   text-align: center;
 }
 
-form footer button {
-  padding: 5px;
-  font-size: 20px;
-  border-radius: 0.3em;
-  background-color: rgb(255, 255, 255);
-  margin: 10px 0;
-}
-form footer button:hover {
-  background-color: rgb(200, 220, 200);
-}
-
-form footer button:active {
-
-}
-
 form footer a {
-  color: rgb(255, 255, 60);
+  color: rgb(223, 234, 255);
+}
+form footer a:hover {
+  color: rgb(255, 255, 255);
 }
 
-form footer a:active{
-  color: rgb(255, 191, 101);
+
+
+@media all and (min-width: 500px) {
+  form div {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  form input {
+    width: 70%;
+    padding: 3px;
+  }
 }

@@ -1,0 +1,43 @@
+form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    max-width: 450px;
+    background-color: rgb(46, 81, 116);
+    padding: 10px;
+    color: #f0f8ff;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 1em;
+    border: 2px solid rgba(16, 37, 90, 0.331);
+    box-shadow: 5px 10px 20px 3px #888888;
+  }
+  
+  form div {
+    padding: 5px 0;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 3px;
+  }
+
+.submitButton {
+    margin: 0;
+    transform: translate(5%)
+}
+
+@media all and (min-width: 500px) {
+    form div {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    form input {
+      width: 70%;
+      padding: 3px;
+    }
+  }
