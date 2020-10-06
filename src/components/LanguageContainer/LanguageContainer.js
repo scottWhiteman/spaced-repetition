@@ -8,7 +8,7 @@ export default class LanguageContainer extends Component {
   }
   generateWordItemHtml = (word, i) => {
     return <li className='word-list-item' key={i}>
-      <span className='word-span'>{word.original}</span>
+      <span className='word-span'><h4>{word.original}</h4></span>
       <span className='correct-span'>{word.correct_count}</span>
       <span className='incorrect-span'>{word.incorrect_count}</span>
     </li>
@@ -17,10 +17,10 @@ export default class LanguageContainer extends Component {
   render() {
     return (
       <section>
-        <h3 className='language-name'>{this.props.language.name}</h3>
+        <h2 className='language-name'>{this.props.language.name}</h2>
         <ul className='word-list'>
           <li className='word-list-item' style={{borderBottom: 3+'px solid #777'}}>
-            <span><strong>Word</strong></span>
+            <span><h3>Word</h3></span>
             <span><strong># Correct</strong></span>
             <span><strong># Incorrect</strong></span>
           </li>
