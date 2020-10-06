@@ -20,8 +20,6 @@ class DashboardRoute extends Component {
   }
   renderLanguages = () => {
     const {language = {}, words = []} = this.context;
-    console.log(language);
-    console.log(words);
     return <LanguageContainer language={language} words={words}/>
   }
   
