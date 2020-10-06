@@ -34,6 +34,9 @@ header a:hover {
         margin: 10px 0 15px 10px;
     }
     header nav {
-        margin-top: 25px;
+        margin: 15px 0;
+    }
+    header .usernameDisplay {
+        margin-top: 10px;
     }
 }

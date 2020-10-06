@@ -1,0 +1,83 @@
+h2 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+.language-name {
+  text-align: center;
+  font-size: 24px;
+  background-color: #c1cfe6;
+  width: 60%;
+  border-radius: 3em 3em 0 0;
+  padding: 10px 5px;
+  margin: 10px auto 0 auto;
+}
+
+.word-list {
+  padding: 0;
+  margin: 0 5px;
+  border: 2px solid #888;
+  border-radius: 0.5em;
+}
+
+.word-list .word-list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+  padding: 5px 0;
+  list-style: none;
+}
+
+.word-list .word-list-item:nth-child(even) {
+  background-color: #c1cfe6
+}
+
+.word-list .word-list-item span {
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
+
+section {
+  text-align: center;
+}
+
+button.learn {
+  background-color: rgb(46, 81, 116);
+  color: #f0f8ff;
+  font-size: 24px;
+  border: 3px solid #222;
+  border-left: 3px solid #555;
+  border-top: 3px solid #555;
+  border-radius: 0.25em;
+  text-align: center;
+  padding: 10px;
+  outline: none;
+}
+button.learn:hover {
+  background-color: rgb(119, 170, 221);
+}
+button.learn:active {
+  border: 3px solid #555;
+  border-left: 3px solid #222;
+  border-top: 3px solid #222;
+  background-color: rgb(16, 51, 87);
+  padding: 11px 9px 9px 11px;
+}
+
+@media all and (min-width: 500px) {
+  .language-name {
+    max-width: 350px;
+  }
+  .word-list {
+    width: 85%;
+    margin: auto;
+    min-width: 480px;
+    max-width: 700px;
+    font-size: 18px;
+  }
+}
