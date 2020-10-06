@@ -23,16 +23,18 @@ h4 {
 }
 
 .word-list {
-  padding: 0;
   margin: 0 5px;
   border: 2px solid #888;
   border-radius: 0.5em;
 }
 
+ul {
+  padding: 0;
+}
+
 .word-list .word-list-item {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   margin: 0;
   padding: 5px 0;
   list-style: none;
@@ -42,14 +44,22 @@ h4 {
   background-color: #c1cfe6
 }
 
-.word-list .word-list-item span {
-  padding: 0;
-  text-align: center;
+.word-list .word-list-item .table-category,
+.word-list .word-list-item .item-info {
   width: 100%;
+}
+
+.word-list .word-list-item h4 {
+  text-align: left;
+  padding-left: 5px;
 }
 
 section {
   text-align: center;
+}
+
+.total-score {
+  margin: 15px;
 }
 
 button.learn {

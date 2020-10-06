@@ -8,9 +8,9 @@ export default class LanguageContainer extends Component {
   }
   generateWordItemHtml = (word, i) => {
     return <li className='word-list-item' key={i}>
-      <span className='word-span'><h4>{word.original}</h4></span>
-      <span className='correct-span'>{word.correct_count}</span>
-      <span className='incorrect-span'>{word.incorrect_count}</span>
+      <h4 className='item-info'>{word.original}</h4>
+      <span className='item-info'>{word.correct_count}</span>
+      <span className='item-info'>{word.incorrect_count}</span>
     </li>
   }
   
@@ -18,15 +18,17 @@ export default class LanguageContainer extends Component {
     return (
       <section>
         <h2 className='language-name'>{this.props.language.name}</h2>
-        <ul className='word-list'>
-          <li className='word-list-item' style={{borderBottom: 3+'px solid #777'}}>
-            <span><h3>Word</h3></span>
-            <span><strong># Correct</strong></span>
-            <span><strong># Incorrect</strong></span>
-          </li>
-          {this.renderWordList()}
-        </ul>
-        <h4>Total Score: {this.props.language.total_score}</h4>
+          <div className="word-list">
+            <div className='word-list-item' style={{borderBottom: 3+'px solid #777'}}>
+              <h3 className="table-category">Word</h3>
+              <span className="table-category"># Correct</span>
+              <span className="table-category"># Incorrect</span>
+            </div>
+            <ul>
+              {this.renderWordList()}
+            </ul>
+          </div>
+        <h4 className="total-score">Total Score: {this.props.language.total_score}</h4>
         <Link to='/learn'><button className='learn' onClick={this.toLearn}>Continue this language</button></Link>
       </section>
     );
