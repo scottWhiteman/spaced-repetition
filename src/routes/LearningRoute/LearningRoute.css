@@ -1,0 +1,25 @@
+.original-word {
+  font-size: 30px;
+  border: 3px solid #444;
+  border-radius: 0.3em;
+  width: 200px;
+  margin: auto;
+  padding: 10px 0;
+}
+
+.learn-guess-form label {
+  margin: 10px;
+  padding: 0;
+}
+
+.learn-guess-form input {
+  text-align: center;
+  font-size: 24px;
+  margin: 5px auto;
+}
+
+.learn-guess-form button {
+  margin: 10px auto;
+  padding: 10px;
+  font-size: 20px;
+}
