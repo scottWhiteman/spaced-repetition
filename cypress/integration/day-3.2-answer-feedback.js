@@ -85,7 +85,7 @@ describe(`User story: Answer feedback`, function() {
         const [languageHeadFixture, incorrectFixture] = fixtures
 
         cy.get('main').within($main => {
-          cy.get('.DisplayScore p')
+          cy.get('.display-score')
             .should(
               'have.text',
               `Your total score is: ${incorrectFixture.totalScore}`,
@@ -93,17 +93,17 @@ describe(`User story: Answer feedback`, function() {
           cy.get('h2')
             .should(
               'have.text',
-              `Good try, but not quite right :(`,
+              `Sorry, the correct answer is ${incorrectFixture.answer}`,
             )
-          cy.get('.DisplayFeedback p')
-            .should(
-              'have.text',
-              `The correct translation for ${languageHeadFixture.nextWord} was ${incorrectFixture.answer} and you chose ${guess}!`,
-            )
+          // cy.get('.DisplayFeedback p')
+          //   .should(
+          //     'have.text',
+          //     `The correct translation for ${languageHeadFixture.nextWord} was ${incorrectFixture.answer} and you chose ${guess}!`,
+          //   )
           cy.get('button')
             .should(
               'have.text',
-              `Try another word!`,
+              `Next Word`,
             )
         })
       })
@@ -139,7 +139,7 @@ describe(`User story: Answer feedback`, function() {
         const [languageHeadFixture, incorrectFixture] = fixtures
 
         cy.get('main').within($main => {
-          cy.get('.DisplayScore p')
+          cy.get('.display-score')
             .should(
               'have.text',
               `Your total score is: ${incorrectFixture.totalScore}`,
@@ -147,17 +147,17 @@ describe(`User story: Answer feedback`, function() {
           cy.get('h2')
             .should(
               'have.text',
-              `You were correct! :D`,
+              `Correct!`,
             )
-          cy.get('.DisplayFeedback p')
-            .should(
-              'have.text',
-              `The correct translation for ${languageHeadFixture.nextWord} was ${incorrectFixture.answer} and you chose ${guess}!`,
-            )
+          // cy.get('.DisplayFeedback p')
+          //   .should(
+          //     'have.text',
+          //     `The correct translation for ${languageHeadFixture.nextWord} was ${incorrectFixture.answer} and you chose ${guess}!`,
+          //   )
           cy.get('button')
             .should(
               'have.text',
-              `Try another word!`,
+              `Next Word`,
             )
         })
       })
