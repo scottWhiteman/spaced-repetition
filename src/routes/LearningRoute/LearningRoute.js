@@ -7,7 +7,7 @@ class LearningRoute extends Component {
     currentWord: '',
     correctScore: 0,
     incorrectScore: 0,
-    totalScore: 0
+    totalScore: 0,
   }
 
   componentDidMount = () => {
@@ -24,8 +24,8 @@ class LearningRoute extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const answer = e.target['learn-guess-input'].value;
-    LearningRouteService.postAnswer(answer)
+    const answer = e.target['learn-guess-input'];
+    LearningRouteService.postAnswer(answer.value)
     .then(resJson => {
       this.setState({
         currentWord: resJson.nextWord,
@@ -34,14 +34,16 @@ class LearningRoute extends Component {
         totalScore: resJson.totalScore
       })
     })
+    answer.value = '';
   }
   
   render() {
+    let end = this.state.end
     return (
       <section>
         <h2>Translate the word:</h2>
         <span><h3 className='original-word'>{this.state.currentWord}</h3></span>
-        
+
         <form className='learn-guess-form' onSubmit={this.handleSubmit}>
           <label htmlFor='learn-guess-input'>What's the translation for this word?</label>
           <input id='learn-guess-input' type='text' required/>
