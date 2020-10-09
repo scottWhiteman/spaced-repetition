@@ -53,7 +53,7 @@ class LearningRoute extends Component {
       return (
         <section className="next-page">
           {this.state.correct === true && <h2>Correct!</h2>}
-          {this.state.correct === false && <h2>{`Sorry, the correct answer is ${this.state.currentTranslation}`}</h2>}
+          {this.state.correct === false && <h2>Sorry, the correct answer is <section className="correct-highlight">{this.state.currentTranslation}</section></h2>}
           <button type="button" className="learn-button" onClick={this.handleNextButton}>Next Word</button>
         </section>
       )
@@ -77,8 +77,8 @@ class LearningRoute extends Component {
       <section>
         {this.renderContent()}
         <p className="display-score">Your total score is: {this.state.totalScore}</p>
-        <p>You have answered this word correctly {this.state.correctScore} times.</p>
-        <p>You have answered this word incorrectly {this.state.incorrectScore} times.</p>
+        {this.state.correct === null && <p>You have answered this word correctly {this.state.correctScore} times.</p>}
+        {this.state.correct === null && <p>You have answered this word incorrectly {this.state.incorrectScore} times.</p>}
       </section>
     );
   }

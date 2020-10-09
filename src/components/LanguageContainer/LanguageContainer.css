@@ -23,13 +23,14 @@ h4 {
 }
 
 .word-list {
-  margin: 0 5px;
+  margin: 0 10px;
   border: 2px solid #888;
-  border-radius: 0.5em;
+  border-radius: 0.25em;
 }
 
 ul {
   padding: 0;
+  margin: 0;
 }
 
 .word-list .word-list-item {
@@ -47,6 +48,7 @@ ul {
 .word-list .word-list-item .table-category,
 .word-list .word-list-item .item-info {
   width: 100%;
+  align-self: center;
 }
 
 .word-list .word-list-item h4 {
@@ -82,7 +84,7 @@ button.learn:active {
   border-left: 3px solid #222;
   border-top: 3px solid #222;
   background-color: rgb(16, 51, 87);
-  padding: 11px 9px 9px 11px;
+  
 }
 
 @media all and (min-width: 500px) {

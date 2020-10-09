@@ -27,6 +27,7 @@
 .learn-guess-form label {
   margin: 10px;
   padding: 0;
+  font-size: 20px;
 }
 
 .learn-guess-form input {
@@ -39,4 +40,19 @@
   margin: 10px auto;
   padding: 10px;
   font-size: 20px;
+}
+
+.next-page {
+  margin: 50px auto 30px auto;
+}
+
+.correct-highlight {
+  background-color: rgb(0, 32, 65);
+  font-size: 42px;
+  font-weight: 1000;
+  width: fit-content;
+  padding: 10px;
+  margin: 20px auto 0 auto;
+  border: 3px dashed #f0f8ff;
+  border-radius: 0.25em;
 }
